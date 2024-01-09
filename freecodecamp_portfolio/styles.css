@@ -1,0 +1,207 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;;
+}
+* {
+
+}
+.menu-gradient {
+    background: 
+                linear-gradient(to top left, rgb(68,255,255), rgba(38, 103, 156, 0), black),
+                linear-gradient(to top right, rgb(49,67,115),rgba(38, 103, 156, 0), rgb(36,88,255))
+                rgba(38, 103, 156, 1);
+    outline: 2px solid gray;
+    padding: 0px;
+    margin: -2px;
+    border-radius: 0.5%;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+.back {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    width: 65%;
+    height: auto;
+    z-index: -2;
+}
+.nav-bar {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding: 0.5em;
+}
+h2 {
+    font-family: sans-serif;
+
+    background: linear-gradient(to top, lightgray, white);
+    background-clip: text;
+    color: transparent;
+
+    -webkit-text-stroke: 0.125vw black;
+
+    letter-spacing: -1px;
+    font-size:2.25vw;
+    margin: 0px;
+    font-weight: bold;
+}
+.clock {
+    position: absolute;
+    right: 0%;
+    bottom: 3.25%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.date {
+    position: relative;
+    width: 20vw;
+    margin-left: auto;
+    bottom: -97.5%;
+    padding-left: 0.5em;
+}
+
+.character {
+    position: relative;
+    width: 75%;
+    height: 15vw;
+    display: grid;
+    grid-template-columns: 23.25% auto;
+    /* border: 2px solid red; */
+    height:auto;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.portrait {
+    /* border: 2px solid green; */
+    height: 15vw;
+}
+.portrait img {
+    height: 100%;
+}
+.character-info {
+    /* border: 2px solid green; */
+    display: grid;
+    grid-template-rows: 25% 75%;
+}
+.name {
+    /* border: 2px solid pink; */
+    align-self: center;
+    margin-left: 0.75vw;
+}
+.stats {
+    /* border: 2px solid pink; */
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.lhm {
+    /* border: 2px solid purple; */
+    display: grid;
+    align-content: space-evenly;
+    margin-left: 0.75vw;
+}
+.levels{
+    /* border: 2px solid purple; */
+}
+.LV, .HP, .MP {
+    /* border: 2px solid orange; */
+    display: inline-block;
+}
+.next-level {
+    /* border: 2px solid orange; */
+    margin-top: 0.75vw;
+}
+.limit-level {
+    /* border: 2px solid orange; */
+    margin-top: 0.55vw;
+}
+
+.stat {
+    display: inline-block;
+    width: 1.5em;
+    font-family: sans-serif;
+    background: linear-gradient(to top, #12a3cc 40%, #7cd9f4 75%);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1.4px black;
+    letter-spacing: -1px;
+    /* font-size: 1.6em; */
+    font-size:2.25vw;
+    margin: 0px;
+    font-weight: bold;
+    /* border: 2px solid green; */
+}
+.LV h2 {
+    display: inline;
+    /* border: 2px solid lightblue; */
+}
+.HP h2 {
+    display: inline;
+    /* border: 2px solid lightblue; */
+}
+.MP h2 {
+    display: inline;
+    /* border: 2px solid lightblue; */
+    justify-self: right;
+    margin-left: 7.5%;
+    margin-right: 0px;
+    white-space: pre;
+}
+
+.numbers{
+    font-size: 2.25vw;
+    font-weight: 1000;
+    background: linear-gradient(to top, gray, white 75%);
+    background-clip: text;
+    color: transparent;
+    line-height: 1em;
+}
+.healthbar{
+    background: linear-gradient(to right, #0180ff 65%, #c6c8c8);
+    height: 0.15vw;
+    border-bottom: 0.25vw solid black;
+    width: 12vw;
+    margin-left: 3.75vw;
+    position:relative;
+    top: -0.45vw;
+    z-index: -1;
+}
+.magicbar {
+    background: linear-gradient(to right, #01ff80 65%, #c1cac6);
+    height: 0.15vw;
+    border-bottom: 0.25vw solid black;
+    width: 12vw;
+    margin-left: 3.75vw;
+    position:relative;
+    top: -0.425vw;
+    z-index: -1;
+}
+.level-progress{
+    background: #191919;
+    outline: 0.125vw solid black;
+    width: 12.5vw;
+    height: 1.75vw;
+    z-index: -1;
+}
+.limit-level-progress{
+    background: #191919;
+    outline: 0.125vw solid black;
+    width: 12.5vw;
+    height: 1.75vw;
+    z-index: -1;
+}
+.level-xp {
+    background: linear-gradient(to top, #227cc8, #8f969d 50%, #367dba 51%,#192f42);
+    width: 35%;
+    height: 1.75vw;
+    z-index: 0;
+}
+.limit-level-xp {
+    background: linear-gradient(to top, #da802a, #a2968a 50%, #d17419 51%,#392919);
+    width: 55%;
+    height: 1.75vw;
+    z-index: 0;
+}
