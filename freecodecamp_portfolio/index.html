@@ -13,10 +13,10 @@
             let h = today.getHours();
             let m = today.getMinutes();
             let s = today.getSeconds();
-            h =  numberWrapper(checkTime(h));
-            m =  numberWrapper(checkTime(m));
-            s =  numberWrapper(checkTime(s));
-            document.getElementById('time').innerHTML = "Time " +  h + ":" + m + ":" + s;
+            h = numberWrapper(checkTime(h));
+            m = numberWrapper(checkTime(m));
+            s = numberWrapper(checkTime(s));
+            document.getElementById('time').innerHTML = "Time " + h + ":" + m + ":" + s;
             setTimeout(startTime, 1000);
             setTimeout(getDate, 1000);
         }
@@ -30,7 +30,7 @@
             const today = new Date();
             let m = today.toLocaleString('default', { month: 'long' });
             let d = numberWrapper(today.getDate()) + getOrdinal(today.getDate());
-            document.getElementById('current-date').innerHTML = m + " "+ d + " " + numberWrapper(today.getFullYear());
+            document.getElementById('current-date').innerHTML = m + " " + d + " " + numberWrapper(today.getFullYear());
         }
 
         function getOrdinal(n) {
@@ -47,8 +47,7 @@
             return ord;
         }
 
-        function numberWrapper(num)
-        {
+        function numberWrapper(num) {
             return `<span class="numbers">${num}</span>`;
         }
 
@@ -57,68 +56,99 @@
             //console.log("bp 1");
             getDate();
         }
+
+        function cursorHandler(elem, displayed) {
+            if (displayed) {
+                elem.children[0].style.display = "block";
+                console.log("displayed");
+            } else {
+                //document.getElementById("cursor"+index).style.display = "none";
+                elem.children[0].style.display = "none";
+                console.log("hidden");
+            }
+        }
     </script>
 
 </head>
 
-<body onload="startDateTime()"></body>
-<div class="menu-gradient back">
+<body onload="startDateTime()">
+    <div class="menu-gradient back">
 
-    <div class="menu-gradient nav-bar">
-        <h2>About</h2>
-        <h2>Contact</h2>
-        <h2>Projects</h2>
-        <h2>Github</h2>
-        <h2>Itchio</h2>
-        <h2>Youtube</h2>
-    </div>
-    <div class="menu-gradient clock">
-        <h2 id="time"></h2>
-    </div>
-    <div class="menu-gradient date">
-        <h2 id="current-date"></h2>
-    </div>
-    <div class="character">
-        <div class="portrait">
-            <img src="portrait.jpg"/>
+        <div class="menu-gradient nav-bar">
+            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+                <img id="cursor1" src="cursor.png">
+                <h2>About</h2>
+            </div>
+            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+                <img class="cursor" src="cursor.png">
+                <h2>Contact</h2>
+            </div>
+            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+                <img class="cursor" src="cursor.png">
+                <h2>Projects</h2>
+            </div>
+            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+                <img class="cursor" src="cursor.png">
+                <h2>Github</h2>
+            </div>
+            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+                <img class="cursor" src="cursor.png">
+                <h2>Itchio</h2>
+            </div>
+            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+                <img class="cursor" src="cursor.png">
+                <h2>Youtube</h2>
+            </div>
         </div>
-        <div class="character-info">
-            <div class="name"><h2>Chris</h2></div>
-            <div class="stats">
-                <div class="lhm">
-                    <div class="LV">
-                        <p class="stat">LV</p>
-                        <h2 class="numbers">26</h2>
-                    </div>
-                    <div class="HP">
-                        <p class="stat">HP</p>
-                        <h2 class="numbers">1165/1165</h2>
-                        <div class="healthbar"></div>
-                    </div>
-                    <div class="MP">
-                        <p class="stat">MP</p>
-                        <h2 class="numbers">208/  208</h2>
-                        <div class="magicbar"></div>
-                    </div>
+        <div class="menu-gradient clock">
+            <h2 id="time"></h2>
+        </div>
+        <div class="menu-gradient date">
+            <h2 id="current-date"></h2>
+        </div>
+        <div class="character">
+            <div class="portrait">
+                <img src="portrait.jpg" />
+            </div>
+            <div class="character-info">
+                <div class="name">
+                    <h2>Chris</h2>
                 </div>
-                <div class="levels">
-                    <div class="next-level">
-                        <h2>Next level</h2>
-                        <div class="level-progress">
-                            <div class="level-xp"></div>
+                <div class="stats">
+                    <div class="lhm">
+                        <div class="LV">
+                            <p class="stat">LV</p>
+                            <h2 class="numbers">26</h2>
+                        </div>
+                        <div class="HP">
+                            <p class="stat">HP</p>
+                            <h2 class="numbers">1165/1165</h2>
+                            <div class="healthbar"></div>
+                        </div>
+                        <div class="MP">
+                            <p class="stat">MP</p>
+                            <h2 class="numbers">208/ 208</h2>
+                            <div class="magicbar"></div>
                         </div>
                     </div>
-                    <div class="limit-level">
-                        <h2>Limit level <span class="numbers">2</span></h2>
-                        <div class="limit-level-progress">
-                            <div class="limit-level-xp"></div>
+                    <div class="levels">
+                        <div class="next-level">
+                            <h2>Next level</h2>
+                            <div class="level-progress">
+                                <div class="level-xp"></div>
+                            </div>
+                        </div>
+                        <div class="limit-level">
+                            <h2>Limit level <span class="numbers">2</span></h2>
+                            <div class="limit-level-progress">
+                                <div class="limit-level-xp"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>
