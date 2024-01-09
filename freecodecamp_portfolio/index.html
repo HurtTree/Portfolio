@@ -28,13 +28,9 @@
 
         function getDate() {
             const today = new Date();
-            //console.log("bp 2, " + today);
             let m = today.toLocaleString('default', { month: 'long' });
-            //console.log("bp 3, " + m);
-            let d = numberWrapper(today.getDate()) + getOrdinal(today.getDay());
-            //console.log("bp 4, " + d);
-            document.getElementById('current-date').innerHTML = m + " "+ d;
-            //console.log("bp 5");
+            let d = numberWrapper(today.getDate()) + getOrdinal(today.getDate());
+            document.getElementById('current-date').innerHTML = m + " "+ d + " " + numberWrapper(today.getFullYear());
         }
 
         function getOrdinal(n) {

@@ -58,10 +58,12 @@ h2 {
 }
 .date {
     position: relative;
-    width: 20vw;
+    min-width: 20vw;
+    max-width: fit-content;
     margin-left: auto;
     bottom: -97.5%;
     padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 .character {
