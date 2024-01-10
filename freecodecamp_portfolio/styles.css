@@ -29,6 +29,8 @@ body {
     height: auto;
     z-index: -2;
     pointer-events: none;
+    /* display: none; */
+
 }
 .nav-bar {
     position: absolute;
@@ -224,4 +226,53 @@ button {
 }
 .container-nav {
     position: relative;
+}
+.skills-menu {
+    position: absolute;
+    aspect-ratio: 3 / 2;
+    width: 65%;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+    display: grid;
+    grid-template-rows: 3vw auto;
+    display: none;
+}
+.skill-list {
+    margin-top: 0.35vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 39.8333vw;
+    padding-left: 4.5vw;
+    padding-top: 1vw;
+    align-content: flex-start;
+    height: 100%;
+}
+.skill-list div {
+    width: 45%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0.5vw;
+    padding-left: 0.5vw;
+    pointer-events: all;
+}
+.skills-desc {
+    height: 3.5vw;
+    align-content: center;
+    justify-content: center;
+}
+.skills-desc h2 {
+    align-self: center;
+    justify-self: center;
+    margin-top: 0.25vw;
+    margin-left: 0.5vw;
+}
+.back-button {
+    position: absolute;
+    right: 0%;
+    bottom: -3.25%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    pointer-events: all;
 }
