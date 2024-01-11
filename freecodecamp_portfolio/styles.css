@@ -106,14 +106,14 @@ h2 {
     display: grid;
     grid-template-columns: auto auto;
 }
+a {
+    text-decoration: none;
+}
 .lhm {
     /* border: 2px solid purple; */
     display: grid;
     align-content: space-evenly;
     margin-left: 0.75vw;
-}
-.levels{
-    /* border: 2px solid purple; */
 }
 .LV, .HP, .MP {
     /* border: 2px solid orange; */
