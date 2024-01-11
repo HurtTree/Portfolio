@@ -66,6 +66,16 @@
             }
         }
 
+        function menuToAbout() {
+            document.getElementById("main-menu").style.display = "none";
+            document.getElementById("about-menu").style.display = "block";
+        }
+
+        function aboutToMenu() {
+            document.getElementById("about-menu").style.display = "none";
+            document.getElementById("main-menu").style.display = "block";
+        }
+
         function menuToSkills() {
             document.getElementById("main-menu").style.display = "none";
             document.getElementById("skills-menu").style.display = "block";
@@ -75,6 +85,27 @@
             document.getElementById("skills-menu").style.display = "none";
             document.getElementById("main-menu").style.display = "block";
         }
+
+        function menuToCerts() {
+            document.getElementById("main-menu").style.display = "none";
+            document.getElementById("certs-menu").style.display = "block";
+        }
+
+        function certsToMenu() {
+            document.getElementById("certs-menu").style.display = "none";
+            document.getElementById("main-menu").style.display = "block";
+        }
+        
+        function menuToContact() {
+            document.getElementById("main-menu").style.display = "none";
+            document.getElementById("contact-menu").style.display = "block";
+        }
+
+        function contactToMenu() {
+            document.getElementById("contact-menu").style.display = "none";
+            document.getElementById("main-menu").style.display = "block";
+        }
+
 
         function getSkillInfo(elem, displayed) {
             cursorHandler(elem, displayed);
@@ -93,7 +124,7 @@
     <div class="menu-gradient back" id="main-menu">
 
         <div class="menu-gradient nav-bar">
-            <div class="container-nav" onmouseenter="cursorHandler(this, true)"
+            <div class="container-nav" onclick="menuToAbout()" onmouseenter="cursorHandler(this, true)"
                 onmouseleave="cursorHandler(this, false)">
                 <img class="cursor" src="cursor.png">
                 <h2>About</h2>
@@ -103,12 +134,12 @@
                 <img class="cursor" src="cursor.png">
                 <h2>Skills</h2>
             </div>
-            <div class="container-nav" onmouseenter="cursorHandler(this, true)"
+            <div class="container-nav" onclick="menuToCerts()" onmouseenter="cursorHandler(this, true)"
                 onmouseleave="cursorHandler(this, false)">
                 <img class="cursor" src="cursor.png">
                 <h2>Certs</h2>
             </div>
-            <div class="container-nav" onmouseenter="cursorHandler(this, true)"
+            <div class="container-nav" onclick="menuToContact()" onmouseenter="cursorHandler(this, true)"
                 onmouseleave="cursorHandler(this, false)">
                 <img class="cursor" src="cursor.png">
                 <h2>Contact</h2>
@@ -175,6 +206,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="about-menu menu-gradient" id="about-menu">
+        <div class="back-button menu-gradient" onclick="aboutToMenu()" onmouseenter="cursorHandler(this, true)"
+            onmouseleave="cursorHandler(this, false)">
+            <img class="cursor" src="cursor.png">
+            <h2>Back</h2>
         </div>
     </div>
     <div class="skills-menu menu-gradient" id="skills-menu">
@@ -267,6 +305,20 @@
                 <h2>Learning</h2>
                 <p class="skill-info">I enjoy finding new things to learn and problems to solve!</p>
             </div>
+        </div>
+    </div>
+    <div class="certs-menu menu-gradient" id="certs-menu">
+        <div class="back-button menu-gradient" onclick="certsToMenu()" onmouseenter="cursorHandler(this, true)"
+            onmouseleave="cursorHandler(this, false)">
+            <img class="cursor" src="cursor.png">
+            <h2>Back</h2>
+        </div>
+    </div>
+    <div class="contact-menu menu-gradient" id="contact-menu">
+        <div class="back-button menu-gradient" onclick="contactToMenu()" onmouseenter="cursorHandler(this, true)"
+            onmouseleave="cursorHandler(this, false)">
+            <img class="cursor" src="cursor.png">
+            <h2>Back</h2>
         </div>
     </div>
 </body>

@@ -279,3 +279,30 @@ button {
     content-visibility: hidden;
     display: none;
 }
+.certs-menu {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    width: 65%;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+    display: none;
+}
+.about-menu {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    width: 65%;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+    display: none;
+}
+.contact-menu {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    width: 65%;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+    display: none;
+}
