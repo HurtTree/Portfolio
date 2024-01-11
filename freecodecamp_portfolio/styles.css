@@ -1,10 +1,11 @@
 body {
     margin: 0px;
+    margin-top: 2.5vw;
     padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: black;;
 }
 * {
@@ -29,8 +30,6 @@ body {
     height: auto;
     z-index: -2;
     pointer-events: none;
-    /* display: none; */
-
 }
 .nav-bar {
     position: absolute;
@@ -228,7 +227,7 @@ button {
     position: relative;
 }
 .skills-menu {
-    position: absolute;
+    position: relative;
     aspect-ratio: 3 / 2;
     width: 65%;
     height: auto;
@@ -243,9 +242,9 @@ button {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 39.8333vw;
+    max-height: 40.125vw;
     padding-left: 4.5vw;
-    padding-top: 1vw;
+    padding-top: 0.5vw;
     align-content: flex-start;
     height: 100%;
 }
@@ -258,7 +257,7 @@ button {
     pointer-events: all;
 }
 .skills-desc {
-    height: 3.5vw;
+    height: 3vw;
     align-content: center;
     justify-content: center;
 }
@@ -275,4 +274,8 @@ button {
     padding-left: 0.5em;
     padding-right: 0.5em;
     pointer-events: all;
+}
+.skill-info {
+    content-visibility: hidden;
+    display: none;
 }

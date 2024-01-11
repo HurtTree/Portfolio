@@ -22,7 +22,7 @@
         }
 
         function checkTime(i) {
-            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            if (i < 10) { i = "0" + i };
             return i;
         }
 
@@ -53,7 +53,6 @@
 
         function startDateTime() {
             startTime();
-            //console.log("bp 1");
             getDate();
         }
 
@@ -77,6 +76,15 @@
             document.getElementById("main-menu").style.display = "block";
         }
 
+        function getSkillInfo(elem, displayed) {
+            cursorHandler(elem, displayed);
+            if (displayed) {
+                document.getElementById("skill-info-text").textContent = elem.children[2].textContent;
+            } else {
+                document.getElementById("skill-info-text").textContent = "Hover over a skill to learn more!";
+            }
+        }
+
     </script>
 
 </head>
@@ -85,25 +93,39 @@
     <div class="menu-gradient back" id="main-menu">
 
         <div class="menu-gradient nav-bar">
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="cursorHandler(this, true)"
+                onmouseleave="cursorHandler(this, false)">
                 <img class="cursor" src="cursor.png">
                 <h2>About</h2>
             </div>
-            <div class="container-nav"  onclick="menuToSkills()" onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onclick="menuToSkills()" onmouseenter="cursorHandler(this, true)"
+                onmouseleave="cursorHandler(this, false)">
                 <img class="cursor" src="cursor.png">
                 <h2>Skills</h2>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="cursorHandler(this, true)"
+                onmouseleave="cursorHandler(this, false)">
+                <img class="cursor" src="cursor.png">
+                <h2>Certs</h2>
+            </div>
+            <div class="container-nav" onmouseenter="cursorHandler(this, true)"
+                onmouseleave="cursorHandler(this, false)">
                 <img class="cursor" src="cursor.png">
                 <h2>Contact</h2>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="cursorHandler(this, true)"
+                onmouseleave="cursorHandler(this, false)">
                 <img class="cursor" src="cursor.png">
-                <a target="_blank" href="https://github.com/HurtTree"><h2>Github</h2></a>
+                <a target="_blank" href="https://github.com/HurtTree">
+                    <h2>Github</h2>
+                </a>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="cursorHandler(this, true)"
+                onmouseleave="cursorHandler(this, false)">
                 <img class="cursor" src="cursor.png">
-                <a target="_blank" href="https://hurttree.itch.io/"><h2>Itchio</h2></a>
+                <a target="_blank" href="https://hurttree.itch.io/">
+                    <h2>Itchio</h2>
+                </a>
             </div>
         </div>
         <div class="menu-gradient clock">
@@ -157,88 +179,93 @@
     </div>
     <div class="skills-menu menu-gradient" id="skills-menu">
         <div class="skills-desc menu-gradient">
-            <h2>PLACEHOLDER TEXT DESCRIBING SKILL</h2>
+            <h2 id="skill-info-text">Hover over a skill to learn more!</h2>
         </div>
-        <div class="back-button menu-gradient" onclick="skillsToMenu()" onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+        <div class="back-button menu-gradient" onclick="skillsToMenu()" onmouseenter="cursorHandler(this, true)"
+            onmouseleave="cursorHandler(this, false)">
             <img class="cursor" src="cursor.png">
             <h2>Back</h2>
         </div>
         <div class="skill-list menu-gradient">
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills1</h2>
+                <h2>HTML</h2>
+                <p class="skill-info">I know my way around nested elements and properties!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills2</h2>
+                <h2>CSS</h2>
+                <p class="skill-info">I can center a div! (and other useful tricks!)</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills3</h2>
+                <h2>Javascript</h2>
+                <p class="skill-info">Algorithms, OOP, FP, and Data Structures!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills4</h2>
+                <h2>Web Development</h2>
+                <p class="skill-info">I made this website didn't I?</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills5</h2>
+                <h2>C#</h2>
+                <p class="skill-info">This is my favorite programming language!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills6</h2>
+                <h2>Unity Engine</h2>
+                <p class="skill-info">Most of my game-dev adventures happen here!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills7</h2>
+                <h2>Debugging</h2>
+                <p class="skill-info">I can spam console.log(), and I know how to use a debugger!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills8</h2>
+                <h2>3D Modeling</h2>
+                <p class="skill-info">Blender is useful for game-dev and 3D-Printing!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills9</h2>
+                <h2>Game Development</h2>
+                <p class="skill-info">Video games are my passion!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills10</h2>
+                <h2>Google Searching</h2>
+                <p class="skill-info">I can find answers if I need them, and fast!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills11</h2>
+                <h2>Microcontrollers</h2>
+                <p class="skill-info">I have made many fun projects with Arduino and Raspberry Pi!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills12</h2>
+                <h2>PCB Design</h2>
+                <p class="skill-info">I know how to design custom PCBs using EasyEDA!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills13</h2>
+                <h2>Customer Service</h2>
+                <p class="skill-info">I have had the patience to work in retail!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills14</h2>
+                <h2>Troubleshooting</h2>
+                <p class="skill-info">I am the person they call to fix the printers!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills15</h2>
+                <h2>Communication</h2>
+                <p class="skill-info">I have worked as a team to do great things!</p>
             </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
+            <div class="container-nav" onmouseenter="getSkillInfo(this, true)" onmouseleave="getSkillInfo(this, false)">
                 <img class="cursor" src="cursor.png">
-                <h2>Skills16</h2>
-            </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
-                <img class="cursor" src="cursor.png">
-                <h2>Skills17</h2>
-            </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
-                <img class="cursor" src="cursor.png">
-                <h2>Skills18</h2>
-            </div>
-            <div class="container-nav"  onmouseenter="cursorHandler(this, true)" onmouseleave="cursorHandler(this, false)">
-                <img class="cursor" src="cursor.png">
-                <h2>Skills19</h2>
+                <h2>Learning</h2>
+                <p class="skill-info">I enjoy finding new things to learn and problems to solve!</p>
             </div>
         </div>
     </div>
