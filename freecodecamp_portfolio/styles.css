@@ -233,20 +233,20 @@ button {
     height: auto;
     z-index: 3;
     pointer-events: none;
-    display: grid;
-    grid-template-rows: 3vw auto;
+    /* display: grid; */
+    /* grid-template-rows: 7.5% 92.5%; */
     display: none;
 }
 .skill-list {
-    margin-top: 0.35vw;
+    /* margin-top: 0.4vw; */
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 40.125vw;
     padding-left: 4.5vw;
     padding-top: 0.5vw;
     align-content: flex-start;
-    height: 100%;
+    height: 92.5%;
 }
 .skill-list div {
     width: 45%;
@@ -257,9 +257,11 @@ button {
     pointer-events: all;
 }
 .skills-desc {
-    height: 3vw;
     align-content: center;
+    position: relative;
     justify-content: center;
+    height: 7.5%;
+    margin-bottom: 6px;
 }
 .skills-desc h2 {
     align-self: center;
@@ -274,6 +276,7 @@ button {
     padding-left: 0.5em;
     padding-right: 0.5em;
     pointer-events: all;
+    z-index: 5;
 }
 .skill-info {
     content-visibility: hidden;
@@ -287,6 +290,14 @@ button {
     z-index: 3;
     pointer-events: none;
     display: none;
+    padding-top: 3vw;
+    padding-left: 6vw;
+}
+.certs-menu div {
+    pointer-events: all;
+}
+.cert {
+    height: 3.5vw;
 }
 .about-menu {
     position: relative;
@@ -305,4 +316,20 @@ button {
     z-index: 3;
     pointer-events: none;
     display: none;
+}
+.about-me, .hire-me-plz{
+    margin:1.5vw;
+}
+.contact-menu h2 {
+    /* margin: 1.5vw; */
+}
+.my-email {
+    font-size:3vw;
+    text-align: center;
+    margin-bottom: 1.5vw;
+    margin-top: 5vw;
+    pointer-events: all;
+}
+.copy-message {
+    text-align: center;
 }

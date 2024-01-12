@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Portfolio</title>
+    <title>HurtTree Portfolio</title>
     <meta name="description" content="My Portfolio">
+    <link rel="icon" href="HTlogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <script>
@@ -60,9 +61,11 @@
             if (displayed) {
                 elem.children[0].style.display = "block";
                 console.log("displayed");
-                //TODO add mute option
-                var cursorSFX = new Audio("cursor-sfx.mp3");
-                cursorSFX.play();
+                //Removed Cursor SFX because people found it annoying
+                // //TODO add mute option
+                // var cursorSFX = new Audio("cursor-sfx.mp3");
+                // cursorSFX.volume = 0.1;
+                // cursorSFX.play();
             } else {
                 elem.children[0].style.display = "none";
                 console.log("hidden");
@@ -98,7 +101,7 @@
             document.getElementById("certs-menu").style.display = "none";
             document.getElementById("main-menu").style.display = "block";
         }
-        
+
         function menuToContact() {
             document.getElementById("main-menu").style.display = "none";
             document.getElementById("contact-menu").style.display = "block";
@@ -109,7 +112,6 @@
             document.getElementById("main-menu").style.display = "block";
         }
 
-
         function getSkillInfo(elem, displayed) {
             cursorHandler(elem, displayed);
             if (displayed) {
@@ -117,6 +119,13 @@
             } else {
                 document.getElementById("skill-info-text").textContent = "Hover over a skill to learn more!";
             }
+        }
+
+        async function copyEmail() {
+            let mailaddress = "hurttree@hotmail.com";
+            navigator.clipboard.writeText(mailaddress);
+            await new Promise(r => setTimeout(r, 100));
+            alert("My Email Was Copied To The Clipboard!");
         }
 
     </script>
@@ -212,6 +221,13 @@
         </div>
     </div>
     <div class="about-menu menu-gradient" id="about-menu">
+        <h2 class="about-me">Hello, my name is Chris and I enjoy coding! I am a self-taught programmer who loves to
+            learn and create new things. My online dev alias is HurtTree and I specialize in game development. I spend
+            most of my free time picking up new skills and throwing projects together.</h2>
+        <h2 class="hire-me-plz">I am currently looking for remote dev work, but would be willing to go hybrid for the
+            right opportunity! If you have any questions, comments, or employment opportunities, please visit the
+            Contact page of my site.</h2>
+        </h2>
         <div class="back-button menu-gradient" onclick="aboutToMenu()" onmouseenter="cursorHandler(this, true)"
             onmouseleave="cursorHandler(this, false)">
             <img class="cursor" src="cursor.png">
@@ -311,6 +327,22 @@
         </div>
     </div>
     <div class="certs-menu menu-gradient" id="certs-menu">
+        <div class="container-nav cert" onmouseenter="cursorHandler(this, true)"
+            onmouseleave="cursorHandler(this, false)">
+            <img class="cursor" src="cursor.png">
+            <a target="_blank"
+                href="https://www.freecodecamp.org/certification/CConnolly1123/foundational-c-sharp-with-microsoft">
+                <h2>Foundational C# with Microsoft</h2>
+            </a>
+        </div>
+        <div class="container-nav cert" onmouseenter="cursorHandler(this, true)"
+            onmouseleave="cursorHandler(this, false)">
+            <img class="cursor" src="cursor.png">
+            <a target="_blank"
+                href="https://www.freecodecamp.org/certification/CConnolly1123/javascript-algorithms-and-data-structures">
+                <h2>Algorithms and Data Structures</h2>
+            </a>
+        </div>
         <div class="back-button menu-gradient" onclick="certsToMenu()" onmouseenter="cursorHandler(this, true)"
             onmouseleave="cursorHandler(this, false)">
             <img class="cursor" src="cursor.png">
@@ -318,6 +350,11 @@
         </div>
     </div>
     <div class="contact-menu menu-gradient" id="contact-menu">
+        <h2 class="hire-me-plz">I am currently looking for remote dev work, but would be willing to go hybrid for the
+            right opportunity! Send me an email if you have any questions, comments, or employment opportunities!</h2>
+        <h2 class="hire-me-plz">I usually reply to emails within a couple of hours, don't hesitate to say hi!</h2>
+        <h2 class="my-email" onclick="copyEmail()">HurtTree@hotmail.com</h2>
+        <h2 class="copy-message">You can click on my email to copy it to your clipboard.</h2>
         <div class="back-button menu-gradient" onclick="contactToMenu()" onmouseenter="cursorHandler(this, true)"
             onmouseleave="cursorHandler(this, false)">
             <img class="cursor" src="cursor.png">
