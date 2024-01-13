@@ -1,335 +1,339 @@
 body {
-    margin: 0px;
-    margin-top: 2.5vw;
-    padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: black;;
+  margin: 0px;
+  margin-top: 2.5vw;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: black;;
 }
 * {
-    pointer-events: none;
+  pointer-events: none;
 }
 .menu-gradient {
-    background: 
-                linear-gradient(to top left, rgb(68,255,255), rgba(38, 103, 156, 0), black),
-                linear-gradient(to top right, rgb(49,67,115),rgba(38, 103, 156, 0), rgb(36,88,255))
-                rgba(38, 103, 156, 1);
-    outline: 2px solid gray;
-    padding: 0px;
-    margin: -2px;
-    border-radius: 0.5%;
-    box-sizing: border-box;
-    border: 2px solid black;
+  background: 
+              linear-gradient(to top left, rgb(68,255,255), rgba(38, 103, 156, 0), black),
+              linear-gradient(to top right, rgb(49,67,115),rgba(38, 103, 156, 0), rgb(36,88,255))
+              rgba(38, 103, 156, 1);
+  outline: 2px solid gray;
+  padding: 0px;
+  margin: -2px;
+  border-radius: 0.5%;
+  box-sizing: border-box;
+  border: 2px solid black;
 }
 .back {
-    position: relative;
-    aspect-ratio: 3 / 2;
-    width: 65%;
-    height: auto;
-    z-index: -2;
-    pointer-events: none;
+  position: relative;
+  aspect-ratio: 3 / 2;
+  width: 65%;
+  height: auto;
+  z-index: -2;
+  pointer-events: none;
 }
 .nav-bar {
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    padding: 0.5em;
-    pointer-events: none;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 0.5em;
+  pointer-events: none;
 }
 .nav-bar h2 {
-    pointer-events: all;
+  pointer-events: all;
 }
 h2 {
-    font-family: sans-serif;
+  font-family: sans-serif;
 
-    background: linear-gradient(to top, lightgray, white);
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(to top, lightgray, white);
+  background-clip: text;
+  color: transparent;
 
-    -webkit-text-stroke: 0.125vw black;
+  -webkit-text-stroke: 0.125vw black;
 
-    letter-spacing: -1px;
-    font-size:2.25vw;
-    margin: 0px;
-    font-weight: bold;
+  letter-spacing: -1px;
+  font-size:2.25vw;
+  margin: 0px;
+  font-weight: bold;
 }
 .clock {
-    position: absolute;
-    right: 0%;
-    bottom: 3.25%;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+  position: absolute;
+  right: 0%;
+  bottom: 3.25%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 .date {
-    position: relative;
-    min-width: 20vw;
-    max-width: fit-content;
-    margin-left: auto;
-    bottom: -97.5%;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+  position: relative;
+  min-width: 20vw;
+  max-width: fit-content;
+  margin-left: auto;
+  bottom: -97.5%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .character {
-    position: relative;
-    width: 75%;
-    height: 15vw;
-    display: grid;
-    grid-template-columns: 23.25% auto;
-    /* border: 2px solid red; */
-    height:auto;
-    margin-left: 10%;
-    margin-top: 5%;
+  position: relative;
+  width: 75%;
+  height: 15vw;
+  display: grid;
+  grid-template-columns: 23.25% auto;
+  /* border: 2px solid red; */
+  height:auto;
+  margin-left: 10%;
+  margin-top: 5%;
 }
 .portrait {
-    /* border: 2px solid green; */
-    height: 15vw;
+  /* border: 2px solid green; */
+  height: 15vw;
 }
 .portrait img {
-    height: 100%;
+  height: 100%;
 }
 .character-info {
-    /* border: 2px solid green; */
-    display: grid;
-    grid-template-rows: 25% 75%;
+  /* border: 2px solid green; */
+  display: grid;
+  grid-template-rows: 25% 75%;
 }
 .name {
-    /* border: 2px solid pink; */
-    align-self: center;
-    margin-left: 0.75vw;
+  /* border: 2px solid pink; */
+  align-self: center;
+  margin-left: 0.75vw;
 }
 .stats {
-    /* border: 2px solid pink; */
-    display: grid;
-    grid-template-columns: auto auto;
+  /* border: 2px solid pink; */
+  display: grid;
+  grid-template-columns: auto auto;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .lhm {
-    /* border: 2px solid purple; */
-    display: grid;
-    align-content: space-evenly;
-    margin-left: 0.75vw;
+  /* border: 2px solid purple; */
+  display: grid;
+  align-content: space-evenly;
+  margin-left: 0.75vw;
 }
 .LV, .HP, .MP {
-    /* border: 2px solid orange; */
-    display: inline-block;
+  /* border: 2px solid orange; */
+  display: inline-block;
 }
 .next-level {
-    /* border: 2px solid orange; */
-    margin-top: 0.75vw;
+  /* border: 2px solid orange; */
+  margin-top: 0.75vw;
 }
 .limit-level {
-    /* border: 2px solid orange; */
-    margin-top: 0.55vw;
+  /* border: 2px solid orange; */
+  margin-top: 0.55vw;
 }
 
 .stat {
-    display: inline-block;
-    width: 1.5em;
-    font-family: sans-serif;
-    background: linear-gradient(to top, #12a3cc 40%, #7cd9f4 75%);
-    background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 1.4px black;
-    letter-spacing: -1px;
-    /* font-size: 1.6em; */
-    font-size:2.25vw;
-    margin: 0px;
-    font-weight: bold;
-    /* border: 2px solid green; */
+  display: inline-block;
+  width: 1.5em;
+  font-family: sans-serif;
+  background: linear-gradient(to top, #12a3cc 40%, #7cd9f4 75%);
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1.4px black;
+  letter-spacing: -1px;
+  /* font-size: 1.6em; */
+  font-size:2.25vw;
+  margin: 0px;
+  font-weight: bold;
+  /* border: 2px solid green; */
 }
 .LV h2 {
-    display: inline;
-    /* border: 2px solid lightblue; */
+  display: inline;
+  /* border: 2px solid lightblue; */
 }
 .HP h2 {
-    display: inline;
-    /* border: 2px solid lightblue; */
+  display: inline;
+  /* border: 2px solid lightblue; */
 }
 .MP h2 {
-    display: inline;
-    /* border: 2px solid lightblue; */
-    justify-self: right;
-    margin-left: 7.5%;
-    margin-right: 0px;
-    white-space: pre;
+  display: inline;
+  /* border: 2px solid lightblue; */
+  justify-self: right;
+  margin-left: 7.5%;
+  margin-right: 0px;
+  white-space: pre;
 }
 
 .numbers{
-    font-size: 2.25vw;
-    font-weight: 1000;
-    background: linear-gradient(to top, gray, white 75%);
-    background-clip: text;
-    color: transparent;
-    line-height: 1em;
+  font-size: 2.25vw;
+  font-weight: 1000;
+  background: linear-gradient(to top, gray, white 75%);
+  background-clip: text;
+  color: transparent;
+  line-height: 1em;
 }
 .healthbar{
-    background: linear-gradient(to right, #0180ff 65%, #c6c8c8);
-    height: 0.15vw;
-    border-bottom: 0.25vw solid black;
-    width: 12vw;
-    margin-left: 3.75vw;
-    position:relative;
-    top: -0.45vw;
-    z-index: -1;
+  background: linear-gradient(to right, #0180ff 65%, #c6c8c8);
+  height: 0.15vw;
+  border-bottom: 0.25vw solid black;
+  width: 12vw;
+  margin-left: 3.75vw;
+  position:relative;
+  top: -0.45vw;
+  z-index: -1;
 }
 .magicbar {
-    background: linear-gradient(to right, #01ff80 65%, #c1cac6);
-    height: 0.15vw;
-    border-bottom: 0.25vw solid black;
-    width: 12vw;
-    margin-left: 3.75vw;
-    position:relative;
-    top: -0.425vw;
-    z-index: -1;
+  background: linear-gradient(to right, #01ff80 65%, #c1cac6);
+  height: 0.15vw;
+  border-bottom: 0.25vw solid black;
+  width: 12vw;
+  margin-left: 3.75vw;
+  position:relative;
+  top: -0.425vw;
+  z-index: -1;
 }
 .level-progress{
-    background: #191919;
-    outline: 0.125vw solid black;
-    width: 12.5vw;
-    height: 1.75vw;
-    z-index: -1;
+  background: #191919;
+  outline: 0.125vw solid black;
+  width: 12.5vw;
+  height: 1.75vw;
+  z-index: -1;
 }
 .limit-level-progress{
-    background: #191919;
-    outline: 0.125vw solid black;
-    width: 12.5vw;
-    height: 1.75vw;
-    z-index: -1;
+  background: #191919;
+  outline: 0.125vw solid black;
+  width: 12.5vw;
+  height: 1.75vw;
+  z-index: -1;
 }
 .level-xp {
-    background: linear-gradient(to top, #227cc8, #8f969d 50%, #367dba 51%,#192f42);
-    width: 35%;
-    height: 1.75vw;
-    z-index: 0;
+  background: linear-gradient(to top, #227cc8, #8f969d 50%, #367dba 51%,#192f42);
+  width: 35%;
+  height: 1.75vw;
+  z-index: 0;
 }
 .limit-level-xp {
-    background: linear-gradient(to top, #da802a, #a2968a 50%, #d17419 51%,#392919);
-    width: 55%;
-    height: 1.75vw;
-    z-index: 0;
+  background: linear-gradient(to top, #da802a, #a2968a 50%, #d17419 51%,#392919);
+  width: 55%;
+  height: 1.75vw;
+  z-index: 0;
 }
 .cursor {
-    position: absolute;
-    height:2.25vw;
-    left: -4.5vw;
-    top: 0.6vw;
-    display: none;
+  position: absolute;
+  height:2.25vw;
+  left: -4.5vw;
+  top: 0.6vw;
+  display: none;
 }
 button {
-    pointer-events: all;
+  pointer-events: all;
 }
 .container-nav {
-    position: relative;
+  position: relative;
 }
 .skills-menu {
-    position: relative;
-    aspect-ratio: 3 / 2;
-    width: 65%;
-    height: auto;
-    z-index: 3;
-    pointer-events: none;
-    /* display: grid; */
-    /* grid-template-rows: 7.5% 92.5%; */
-    display: none;
+  position: relative;
+  aspect-ratio: 3 / 2;
+  width: 65%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  /* display: grid; */
+  /* grid-template-rows: 7.5% 92.5%; */
+  display: none;
 }
 .skill-list {
-    /* margin-top: 0.4vw; */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-left: 4.5vw;
-    padding-top: 0.5vw;
-    align-content: flex-start;
-    height: 92.5%;
+  /* margin-top: 0.4vw; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 4.5vw;
+  padding-top: 0.5vw;
+  align-content: flex-start;
+  height: 92.5%;
 }
 .skill-list div {
-    width: 45%;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-top: 0.5vw;
-    padding-left: 0.5vw;
-    pointer-events: all;
+  width: 45%;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0.5vw;
+  padding-left: 0.5vw;
+  pointer-events: all;
 }
 .skills-desc {
-    align-content: center;
-    position: relative;
-    justify-content: center;
-    height: 7.5%;
-    margin-bottom: 6px;
+  align-content: center;
+  position: relative;
+  justify-content: center;
+  height: 7.5%;
+  margin-bottom: 6px;
 }
 .skills-desc h2 {
-    align-self: center;
-    justify-self: center;
-    margin-top: 0.25vw;
-    margin-left: 0.5vw;
+  align-self: center;
+  justify-self: center;
+  margin-top: 0.25vw;
+  margin-left: 0.5vw;
 }
 .back-button {
-    position: absolute;
-    right: 0%;
-    bottom: -3.25%;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    pointer-events: all;
-    z-index: 5;
+  position: absolute;
+  right: 0%;
+  bottom: -3.25%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  pointer-events: all;
+  z-index: 5;
 }
 .skill-info {
-    content-visibility: hidden;
-    display: none;
+  content-visibility: hidden;
+  display: none;
 }
 .certs-menu {
-    position: relative;
-    aspect-ratio: 3 / 2;
-    width: 65%;
-    height: auto;
-    z-index: 3;
-    pointer-events: none;
-    display: none;
-    padding-top: 3vw;
-    padding-left: 6vw;
+  position: relative;
+  aspect-ratio: 3 / 2;
+  width: 65%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  display: none;
+  padding-top: 3vw;
+  padding-left: 6vw;
 }
 .certs-menu div {
-    pointer-events: all;
+  /* pointer-events: all; */
 }
 .cert {
-    height: 3.5vw;
+  height: 3.5vw;
+
 }
 .about-menu {
-    position: relative;
-    aspect-ratio: 3 / 2;
-    width: 65%;
-    height: auto;
-    z-index: 3;
-    pointer-events: none;
-    display: none;
+  position: relative;
+  aspect-ratio: 3 / 2;
+  width: 65%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  display: none;
 }
 .contact-menu {
-    position: relative;
-    aspect-ratio: 3 / 2;
-    width: 65%;
-    height: auto;
-    z-index: 3;
-    pointer-events: none;
-    display: none;
+  position: relative;
+  aspect-ratio: 3 / 2;
+  width: 65%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+  display: none;
 }
 .about-me, .hire-me-plz{
-    margin:1.5vw;
+  margin:1.5vw;
 }
 .contact-menu h2 {
-    /* margin: 1.5vw; */
+  /* margin: 1.5vw; */
 }
 .my-email {
-    font-size:3vw;
-    text-align: center;
-    margin-bottom: 1.5vw;
-    margin-top: 5vw;
-    pointer-events: all;
+  font-size:3vw;
+  text-align: center;
+  margin-bottom: 1.5vw;
+  margin-top: 5vw;
+  pointer-events: all;
 }
 .copy-message {
-    text-align: center;
+  text-align: center;
+}
+a {
+  pointer-events: all;
 }
